@@ -5,6 +5,10 @@ using namespace std;
 class Occupation{
     public:
         int exp;
+        
+        Occupation(){
+            exp = 0;
+        }
 };
 
 //戦士クラス
@@ -21,18 +25,24 @@ class Mage : public Occupation{
 
 //僧侶クラス
 class Priest : public Occupation{
-    public :
+    public:
         void castSpell() {cout << "cure spell" << endl;}
 };
 
 //盗賊クラス
 class Thief : public Occupation{
-    public :
+    public:
         void release() {cout << "release" << endl;}
 };
 
 //司教クラス
 class Bishop : public Mage, public Priest{};
+
+//侍クラス
+class Samurai : public Fighter, public Mage{};
+
+//君主クラス
+class Load : public Fighter, public Priest{};
 
 //忍者クラス
 class Ninja : public Fighter, public Thief{};
