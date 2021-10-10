@@ -38,12 +38,6 @@ class Thief : public virtual Occupation{
 //司教クラス
 class Bishop : public Mage, public Priest{};
 
-//侍クラス
-class Samurai : public Fighter, public Mage{};
-
-//君主クラス
-class Load : public Fighter, public Priest{};
-
 //忍者クラス
 class Ninja : public Fighter, public Thief{};
 
