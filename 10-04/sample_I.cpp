@@ -49,9 +49,6 @@ int main(){
     taro.slash();
     taro.exp += 10;
 
-    taro.slash();
-    taro.exp += 10;
-
     shikyo.Mage::castSpell();
     shikyo.exp += 10;
 
