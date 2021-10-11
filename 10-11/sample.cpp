@@ -16,6 +16,9 @@ class Vector2{
         int operator*(const Vector2& v){
             return (x*v.x + y*v.y);
         }
+        Vector2 operator*(const int& num){
+            return Vector2(x*num, y*num);
+        }
         friend Vector2 operator*(const int& num,const Vector2& v);
         Vector2 operator+(const Vector2& v){
             return Vector2(x + v.x, y + v.y);
@@ -24,7 +27,7 @@ class Vector2{
             return Vector2(++x, ++y);
         }
         Vector2 operator++(int d){
-            return Vector2(x++, y++);
+            return Vector2(++x, ++y);
         }
         Vector2 operator+(){
             return *this;
@@ -34,7 +37,7 @@ class Vector2{
         }
 };
 Vector2 operator*(const int& num,const Vector2& v){
-    return (num*v.x, num*v.y);
+    return Vector2(num*v.x, num*v.y);
 }
 
 int main(){
@@ -43,7 +46,7 @@ int main(){
     Vector2 v;
 
     ++v1;
-    v = 2 * v1 + (-v1) * (+v2 * v1);
+	v = 2 * v1 + (-v1) * (+v2 * v1);
     v++;
     v.show();
 
