@@ -8,7 +8,9 @@ class Animal{
 
 class Human : public Animal{
     public:
-        void say(){speak();}
+        void say(){
+            speak();
+        }
         void speak(){
             cout << "speak" << endl;
         }
@@ -16,7 +18,9 @@ class Human : public Animal{
 
 class Dog : public Animal{
     public:
-        void say(){bark();}
+        void say(){
+            bark();
+        }
         void bark(){
             cout << "bark" << endl;
         }
