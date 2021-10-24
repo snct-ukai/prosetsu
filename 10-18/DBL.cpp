@@ -5,12 +5,8 @@ class DBL{
     private:
         double d;
     public:
-        DBL(int n = 0){
-            d = n;
-        }
-        DBL(double n){
-            d = n;
-        }
+        DBL(int n) : d(n){}
+        DBL(double n = 0.0) : d(n){}
         DBL& operator=(int i){
             d = static_cast<double>(i);
             return *this;
