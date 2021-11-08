@@ -11,28 +11,28 @@ class Complex{
         void show(){
             cout << re << "+" << im << "i" << endl;
         }
-        Complex& operator+(const Complex& C){
+        Complex operator+(const Complex& C){
             return Complex(re + C.re, im + C.im);
         }
-        Complex& operator+(const double& d){
+        Complex operator+(const double& d){
             return Complex(re + d, im);
         }
-        Complex& operator-(const Complex& C){
+        Complex operator-(const Complex& C){
             return Complex(re - C.re, im - C.im);
         }
-        Complex& operator-(const double& d){
+        Complex operator-(const double& d){
             return Complex(re - d, im);
         }
-        Complex& operator*(const Complex& C){
+        Complex operator*(const Complex& C){
             return Complex(re * C.re - im * C.im, re * C.im + im * C.re);
         }
-        Complex& operator*(const double& d){
+        Complex operator*(const double& d){
             return Complex(re * d, im * d);
         }
-        Complex& operator/(const Complex& C){
+        Complex operator/(const Complex& C){
             return Complex((re * C.re + im * C.im) / (C.re * C.re + C.im * C.im) , (im * C.re - re * C.im) / (C.re * C.re + C.im * C.im));
         }
-        Complex& operator/(const double& d){
+        Complex operator/(const double& d){
             return Complex(re / d, im / d);
         }
         Complex operator-(){
@@ -43,29 +43,29 @@ class Complex{
             return *this;
         }
 
-        friend Complex& operator+(const double& d, const Complex& C);
-        friend Complex& operator-(const double& d, const Complex& C);
-        friend Complex& operator*(const double& d, const Complex& C);
-        friend Complex& operator/(const double& d, const Complex& C);
+        friend Complex operator+(const double& d, const Complex& C);
+        friend Complex operator-(const double& d, const Complex& C);
+        friend Complex operator*(const double& d, const Complex& C);
+        friend Complex operator/(const double& d, const Complex& C);
         void operator=(const Complex& C){
             re = C.re;
             im = C.im;
         }
 };
 
-Complex& operator+(const double& d, const Complex& C){
+Complex operator+(const double& d, const Complex& C){
     return Complex(C.re + d, C.im);
 }
 
-Complex& operator-(const double& d, const Complex& C){
+Complex operator-(const double& d, const Complex& C){
     return Complex(C.re - d, C.im);
 }
 
-Complex& operator*(const double& d, const Complex& C){
+Complex operator*(const double& d, const Complex& C){
     return Complex(C.re * d, C.im * d);
 }
 
-Complex& operator/(const double& d, const Complex& C){
+Complex operator/(const double& d, const Complex& C){
     return Complex(C.re / d, C.im / d);
 }
 
