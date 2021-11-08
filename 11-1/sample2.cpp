@@ -7,6 +7,7 @@ class Point{
         T x;
         T y;
     public:
+        int c;
         Point();
         Point(T x, T y);
         void set(T x, T y);

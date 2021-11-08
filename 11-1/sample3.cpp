@@ -4,8 +4,9 @@
 using namespace std;
 
 int main(void){
-    vector<unsigned char> str;
+    vector<unsigned char> str;//(ア)
 
+    //(イ)
     str.push_back('p');
     str.push_back('r');
     str.push_back('o');
@@ -14,13 +15,22 @@ int main(void){
     str.push_back('a');
     str.push_back('m');
 
-    cout << str.size() << endl;
+    //(ウ)
+    for(unsigned int i = 0; i < str.size(); i++)
+        cout << str[i] << " ";
 
-    cout << distance(str.begin(), find(str.begin(), str.end(), 'r')) << endl;
+    cout << endl;
 
+    //(エ)
+    vector<unsigned char>::iterator i = find(str.begin(), str.end(), 'r');
+    cout << distance(str.begin(), i) << endl;
+
+    //(オ)
     sort(str.begin(), str.end());
 
+    //(カ)
     for(vector<unsigned char>::iterator it = str.begin(); it != str.end(); it++)
         cout << *it << " ";
+    
     cout << endl;
 }
