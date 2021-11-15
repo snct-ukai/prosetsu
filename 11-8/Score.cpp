@@ -26,7 +26,7 @@ class Score{
         }
 
         bool operator<(const Score& s) const{
-            return this->total() < s.total();
+            return (*this).total() < s.total();
         }
 
         void show(){
@@ -61,7 +61,7 @@ int main(void){
     }
 
     for(auto it = players.begin(); it != players.end(); it++){
-        it -> show();
+        (*it).show();
         cout << endl;
     }
 
@@ -70,7 +70,7 @@ int main(void){
     sort(players.begin(), players.end());
     
     for(auto it = players.begin(); it != players.end(); it++){
-        it -> show();
+        (*it).show();
         cout << endl;
     }
 }
