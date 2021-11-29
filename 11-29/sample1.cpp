@@ -9,10 +9,10 @@ int main(void){
     cin >> day;
     try{
         if(month < 1 || month > 12){
-            throw "月の入力値がおかしい";
+            throw "月の入力値がおかしい\n";
         }
         if(day < 1 || day > 31){
-            throw "日の入力値がおかしい";
+            throw "日の入力値がおかしい\n";
         }
     }
     catch(const char*& err){
