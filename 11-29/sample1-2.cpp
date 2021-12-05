@@ -17,7 +17,7 @@ int main(void){
         }
     }
     catch(const exception& err){
-        cout << err.what();
+        cout << err.what() << endl;
         return -1;
     }
     cout << "今日は" << month << "月" << day << "日です" << endl;

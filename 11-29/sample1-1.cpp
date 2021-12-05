@@ -16,7 +16,7 @@ int main(void){
         }
     }
     catch(const char*& err){
-        cout << err;
+        cout << err << endl;
         return -1;
     }
     cout << "今日は" << month << "月" << day << "日です" << endl;
