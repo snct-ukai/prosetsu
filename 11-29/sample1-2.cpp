@@ -6,7 +6,7 @@ int main(void){
     int month, day;
     cout << "今日は何月？";
     cin >> month;
-    cout << "今日は何日";
+    cout << "今日は何日？";
     cin >> day;
     try{
         if(month < 1 || month > 12){
