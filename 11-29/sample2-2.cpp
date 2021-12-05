@@ -37,7 +37,7 @@ int main()
         date.setDay(day);
     }
     catch(const exception& err){
-        cout << err.what();
+        cout << err.what() << endl;
         return -1;
     }
     cout << "今日は" << date.format() << "です。" << endl;
