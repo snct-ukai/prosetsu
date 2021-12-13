@@ -1,17 +1,18 @@
 #include <iostream>
 #include <fstream>
-#include <stdexcept>
+#include <cstring>
+#include <sstream>
 using namespace std;
 
 int main(void){
     ofstream file;
     file.open("data.txt");
     double d;
+    string s;
     while(true){
-        cin >> d;
-        if(d != '\n'){
-            cout << d;
-            file << d << endl;
+        cin >> s;
+        if(s[1] != '\n'){
+            d = stod(s);
             continue;
         }
         break;
