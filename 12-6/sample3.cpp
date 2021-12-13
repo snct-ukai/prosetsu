@@ -11,11 +11,10 @@ int main(void){
     string s;
     while(true){
         cin >> s;
-        if(s[0] != '\n'){
-            d = stod(s);
-            continue;
+        if(s[0] == '\n'){
+            break;
         }
-        break;
+        d = stod(s);
     }
     file.close();
 }
