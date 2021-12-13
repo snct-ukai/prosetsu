@@ -10,6 +10,7 @@ int main(void){
     while(true){
         cin >> d;
         if(d != '\n'){
+            cout << d;
             file << d << endl;
             continue;
         }
