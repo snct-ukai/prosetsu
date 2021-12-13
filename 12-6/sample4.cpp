@@ -10,6 +10,8 @@ int main(void){
     while(in.eof()){
         in >> d;
         sum += d;
+        cout << d << endl;
     }
     cout << sum << endl;
+    in.close();
 }
