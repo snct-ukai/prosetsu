@@ -8,13 +8,12 @@ int main(void){
     file.open("data.txt");
     double d;
     while(true){
-        try{
-            cin >> d;
+        cin >> d;
+        if(d != '\n'){
             file << d << endl;
+            continue;
         }
-        catch(exception e){
-            break;
-        }
+        break;
     }
     file.close();
 }
