@@ -13,7 +13,7 @@ int main(void){
         getline(cin,s);
         if(s.length()){
             d = stod(s);
-            file << d;
+            file << d << endl;
             continue;
         }
         break;
