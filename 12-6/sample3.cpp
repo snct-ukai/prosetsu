@@ -10,7 +10,7 @@ int main(void){
     double d;
     string s;
     while(true){
-        cin >> s;
+        getline(cin,s);
         if(s.length()){
             d = stod(s);
             file << d;
