@@ -11,7 +11,7 @@ int main(void){
     string s;
     while(true){
         cin >> s;
-        if(s[1] != '\n'){
+        if(s[0] != '\n'){
             d = stod(s);
             continue;
         }
