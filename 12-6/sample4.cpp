@@ -3,9 +3,11 @@
 using namespace std;
 
 int main(void){
-    ifstream in;
-    in.open("data.txt");
+    ifstream in("data.txt");
 
+    if(in.fail()){
+        
+    }
     double sum = 0;
     while(in.eof()){
         double d = 0;
