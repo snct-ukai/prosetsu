@@ -6,12 +6,11 @@ int main(void){
     ifstream in("data.txt");
 
     double sum = 0;
-    while(true){
-        double d;
-        try{
-            in >> d;
-        }catch(exception e){
-            break;
-        }
+    while(in.eof()){
+        double d = 0;
+        in >> d;
+        sum += d;
     }
+
+    cout << sum << endl;
 }
