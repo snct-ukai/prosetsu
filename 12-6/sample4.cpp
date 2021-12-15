@@ -3,10 +3,10 @@
 using namespace std;
 
 int main(void){
-    ifstream in("data.txt");
+    ifstream in("./data.txt");
 
     if(in.fail()){
-        
+
     }
     double sum = 0;
     while(in.eof()){
