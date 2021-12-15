@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(void){
-    ifstream in("data.txt");
+    ifstream in;
+    in.open("data.txt");
 
     double sum = 0;
     while(in.eof()){
