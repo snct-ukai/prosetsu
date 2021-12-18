@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <sstream>
+#include <cstring>
 using namespace std;
 
 int main(void){
@@ -11,13 +13,17 @@ int main(void){
     cout << "| n|     s|" << endl;
     int count = 0;
     while(!file.eof()){
-        switch(count%2){
-            case 0:
-                cout << setprecision(2);
-                break;
-            case 1:
-
-                break;
-        }
+        string str;
+        getline(file,str);
+        stringstream ss;
+        ss << str;
+        ss >> str;
+        cout << "|";
+        cout.width(2);
+        cout << str << "|";
+        ss >> str;
+        cout.width(6);
+        cout << str << "|" << endl;
     }
+    cout << "-----------" << endl;
 }
