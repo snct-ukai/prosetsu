@@ -7,13 +7,11 @@ using namespace std;
 int main(void){
     ofstream file;
     file.open("data.txt");
-    double d;
     string s;
     while(true){
         getline(cin,s);
         if(s.length()){
-            d = stod(s);
-            file << d << endl;
+            file << stod(s) << endl;
             continue;
         }
         break;
