@@ -19,6 +19,6 @@ int main(int argc, char* argv[]){
     while(!input.eof()){
         string str;
         input >> str;
-        output << str;
+        output << str << endl;
     }
 }
